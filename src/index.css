@@ -1,0 +1,51 @@
+body {
+  background-color: lightgray;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 50ch;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+form,
+label,
+main,
+.sets {
+  display: grid;
+  gap: 0.5rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+}
+
+header nav {
+  display: flex;
+  gap: 1ch;
+}
+
+a {
+  color: teal;
+  text-decoration: none;
+}
+
+a:hover,
+a.active {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+ul,
+ol {
+  padding-left: 1rem;
+}
+
