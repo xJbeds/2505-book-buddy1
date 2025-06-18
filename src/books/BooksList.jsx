@@ -1,4 +1,6 @@
 import useQuery from "../api/useQuery.js";
+import useMutation from "../api/useMutation.js";
+import { Link } from 'react-router'
 
 const BooksList = () => {
   const { 
@@ -6,10 +8,16 @@ const BooksList = () => {
     loading,
     error } = useQuery("/books", "books");
 
+    const { mutate } = useMutation('POST', "/reservations", ["books"])
 
   if (!books || loading){
     return <p>Loading...</p>
   }
+const reserveBook = async (id) => {
+  const response = await mutate({bookId:id})
+  console.log(response)
+
+}
 
   return (
   <ul>
@@ -17,7 +25,9 @@ const BooksList = () => {
      
       return (
       <li key={singleBook.id}>
-        <h2>{singleBook.title}</h2>
+        <a style={{fontSize: "2rem"}} 
+        href={`/books/${singleBook.id}`}>
+        {singleBook.title}</a>
         <h4>{singleBook.author}</h4>
          <img src={singleBook.coverimage} 
              alt="Book Image" 
@@ -26,6 +36,7 @@ const BooksList = () => {
              />
         <p>{singleBook.description}</p>
         <p>{singleBook.available}</p>
+        <button onClick={()=>reserveBook(singleBook.id)}>Reserve</button>
       </li>
       )
     })}

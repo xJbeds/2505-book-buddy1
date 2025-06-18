@@ -1,14 +1,9 @@
-import { Outlet } from "react-router";
-
-import Account from "./Account";
-
-const Layout = () => {
+const Account = () => {
   return (
-    <>
-      <Account/>
-      <main>
-        <Outlet />
-      </main>
-    </>
+    <div>
+      <h1>Account Page</h1>
+    </div>
   );
-}
+};
+
+export default Account;
