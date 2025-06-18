@@ -21,7 +21,9 @@ const BookDetails = () => {
     <img src={IndvidualBook.coverimage[0]} 
     alt={`${IndvidualBook.title}'s cover`} />
     <p>{IndvidualBook.description}</p>
+    <button onClick={()=>reserveBook(singleBook.id)}>Reserve</button>
     </>
+    
   )
 
 }

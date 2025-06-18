@@ -36,7 +36,7 @@ const reserveBook = async (id) => {
              />
         <p>{singleBook.description}</p>
         <p>{singleBook.available}</p>
-        <button onClick={()=>reserveBook(singleBook.id)}>Reserve</button>
+        {/* <button onClick={()=>reserveBook(singleBook.id)}>Reserve</button> */}
       </li>
       )
     })}
