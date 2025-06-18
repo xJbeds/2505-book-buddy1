@@ -1,5 +1,9 @@
 body {
-  background-color: lightgray;
+  background: linear-gradient(100deg, #93A5CF,  #E4EfE9); 
+  margin: 0;
+  font-family: sans-serif;
+  min-height: 100vh;
+
 }
 
 * {

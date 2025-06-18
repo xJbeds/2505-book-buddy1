@@ -25,9 +25,9 @@ const reserveBook = async (id) => {
      
       return (
       <li key={singleBook.id}>
-        <a style={{fontSize: "2rem"}} 
-        href={`/books/${singleBook.id}`}>
-        {singleBook.title}</a>
+        <Link style={{fontSize: "2rem", color: "black", textDecoration:"underline"}} 
+        to={`/books/${singleBook.id}`}>
+        {singleBook.title}</Link>
         <h4>{singleBook.author}</h4>
          <img src={singleBook.coverimage} 
              alt="Book Image" 

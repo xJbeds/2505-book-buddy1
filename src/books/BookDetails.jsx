@@ -18,10 +18,13 @@ const BookDetails = () => {
     <>
     <h2>{IndvidualBook.title}</h2>
     <h3>{IndvidualBook.author}</h3>
-    <img src={IndvidualBook.coverimage[0]} 
-    alt={`${IndvidualBook.title}'s cover`} />
+    <img src={IndvidualBook.coverimage} 
+    alt={`${IndvidualBook.title}`} 
+    height='300'
+    width='200'
+    />
     <p>{IndvidualBook.description}</p>
-    <button onClick={()=>reserveBook(singleBook.id)}>Reserve</button>
+    <button onClick={()=>reserveBook(IndvidualBook.id)}>Reserve Book</button>
     </>
     
   )
