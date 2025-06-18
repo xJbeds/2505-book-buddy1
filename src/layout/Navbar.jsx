@@ -5,7 +5,7 @@ const Navbar = () => {
   const { token, logout } = useAuth();
   return (
     <header>
-      <p>Book Buddy</p>
+      <b>Book Buddy</b>
       <nav>
         {token ? (
           <a onClick={() => logout()}>Log out</a>
