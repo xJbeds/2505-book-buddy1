@@ -16,7 +16,7 @@ const App = () => {
     <>
     <Navbar />
       <Routes>
-          <Route path="/Account" element={<Account />} />
+          <Route path="/account" element={<Account />} />
           <Route path="/books" element={<BooksList />} />
           <Route path="/books" element={<BooksPage />} />
           <Route path="/books/:bookId" element={<BookDetails />} />
